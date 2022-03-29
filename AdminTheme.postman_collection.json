@@ -1,0 +1,259 @@
+{
+	"info": {
+		"_postman_id": "4d5c01f2-9af5-49ed-917f-23feac6c8a4e",
+		"name": "AdminTheme",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "http://localhost:8000/api/vehicle",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "ownerIdentifyNumber",
+							"value": "1234568790",
+							"type": "default"
+						},
+						{
+							"key": "ownerDateOfBirthHijri",
+							"value": "1420-01-01",
+							"type": "default"
+						},
+						{
+							"key": "ownerDateOfBirthGregorian",
+							"value": "1999-04-17",
+							"type": "default"
+						},
+						{
+							"key": "sequenceNumber",
+							"value": "123456879",
+							"type": "default"
+						},
+						{
+							"key": "plateLetterRight",
+							"value": "|",
+							"type": "default"
+						},
+						{
+							"key": "plateLetterMiddle",
+							"value": "|",
+							"type": "default"
+						},
+						{
+							"key": "plateLetterLeft",
+							"value": "|",
+							"type": "default"
+						},
+						{
+							"key": "plateNumber",
+							"value": "1234",
+							"type": "default"
+						},
+						{
+							"key": "plateType",
+							"value": "1",
+							"type": "default"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8000/api/vehicle",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"vehicle"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8000/api/rentle",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "sequenceNumber",
+							"value": "532704112",
+							"type": "default"
+						},
+						{
+							"key": "companyRentalOperationId",
+							"value": "9CF2F0B0-9014-49B3-911F",
+							"type": "default"
+						},
+						{
+							"key": "pickupLatitude",
+							"value": "24.723437",
+							"type": "default"
+						},
+						{
+							"key": "pickupLongitude",
+							"value": "46.117452",
+							"type": "default"
+						},
+						{
+							"key": "dropoffLatitude",
+							"value": "24.763437",
+							"type": "default"
+						},
+						{
+							"key": "pickupTimeStamp",
+							"value": "2016-03-28T09:00:00.000",
+							"type": "default"
+						},
+						{
+							"key": "dropoffTimeStamp",
+							"value": "2016-03-28T09:15:00.000",
+							"type": "default"
+						},
+						{
+							"key": "rentalVehicleperiodmins",
+							"value": "42145",
+							"type": "default"
+						},
+						{
+							"key": "customerVehicleRating",
+							"value": "5.0",
+							"type": "default"
+						},
+						{
+							"key": "customerServiceRating",
+							"value": "4.0",
+							"type": "default"
+						},
+						{
+							"key": "dropoffLongitude",
+							"value": "46.547452",
+							"type": "default"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8000/api/rentle",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"rentle"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8000/api/updatelocation",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n   \"locations\":\r\n      [\r\n         {\r\n            \"vehicleSequenceNumber\": \"123456879\",\r\n            \"latitude\": 24.723437,\r\n            \"longitude\": 46.117452,\r\n            \"updatedWhen\": \"2019-01-28T09:15:00.000\",\r\n            \"hasCustomer\": 0\r\n         },\r\n         {\r\n            \"vehicleSequenceNumber\": \"987654321\",\r\n            \"latitude\": 24.723437,\r\n            \"longitude\": 46.117452,\r\n            \"updatedWhen\": \"2019-01-28T09:15:00.000\",\r\n            \"hasCustomer\": 0\r\n         }\r\n     ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/api/updatelocation",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"updatelocation"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8000/api/rentles",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8000/api/rentles",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"rentles"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8000/api/updatelocations",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8000/api/updatelocations",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"updatelocations"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8000/api/vehicles",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8000/api/vehicles",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"vehicles"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
